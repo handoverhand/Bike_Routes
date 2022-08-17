@@ -11,7 +11,10 @@ const PORT = process.env.PORT ?? 3000;
 
 const config = require('./config/config');
 
+const authRouter = require('./routes/authRouter');
+
 config(app);
+app.use('/auth', authRouter);
 
 async function find() {
 
