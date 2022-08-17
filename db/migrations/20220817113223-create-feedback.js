@@ -17,10 +17,18 @@ module.exports = {
       riderLoginFB: {
         allowNull: false,
         type: Sequelize.TEXT,
+        references: {
+          model: 'Riders',
+          key: 'login',
+        },
       },
       routeId: {
         allowNull: false,
         type: Sequelize.INTEGER,
+        references: {
+          model: 'Bikeroutes',
+          key: 'id',
+        },
       },
       createdAt: {
         allowNull: false,
