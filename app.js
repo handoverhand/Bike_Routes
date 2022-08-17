@@ -3,7 +3,7 @@ require('@babel/register');
 const express = require('express');
 
 const sequelize = require('sequelize');
-const {Rider, Feedback, Bikeroute} = require('./db/models');
+// const {Rider, Feedback, Bikeroute} = require('./db/models');
 
 const app = express();
 
@@ -13,27 +13,31 @@ const config = require('./config/config');
 
 const authRouter = require('./routes/authRouter');
 
+const bikeRoutesRouter = require('./routes/bikeRoutesRouter');
+
 config(app);
+
 app.use('/auth', authRouter);
+app.use('/bikeroutes', bikeRoutesRouter);
 
-async function find() {
+// async function find() {
 
-  const riders = await Rider.findAll({
-    raw: true
-  })
+//   const riders = await Rider.findAll({
+//     raw: true
+//   })
 
-  const bikeRoutes = await Bikeroute.findAll({
-    raw: true
-  })
+//   const bikeRoutes = await Bikeroute.findAll({
+//     raw: true
+//   })
 
-  const feedback = await Feedback.findAll({
-    raw: true
-  })
+//   const feedback = await Feedback.findAll({
+//     raw: true
+//   })
 
-  console.log(riders, bikeRoutes, feedback);
-}
+//   console.log(riders, bikeRoutes, feedback);
+// }
 
-find();
+// find();
 
 app.listen(PORT, async () => {
   try {
