@@ -1,4 +1,4 @@
-const React = require('react');
+const React = require('react'); 
 
 
 const Layout = ({children}) => {
@@ -12,7 +12,7 @@ const Layout = ({children}) => {
             <script defer src="/js/client.js"></script>
         </head>
         <body>
-            {children}
+            {children} 
         </body>
         </html>
     )

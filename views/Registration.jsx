@@ -7,6 +7,7 @@ function RegistrationForm() {
         <form action="auth/reg">
             <label htmlFor="loginInput"></label>
             <input name="login" type="text" id="loginInput" />
+            
             <br />
             <label htmlFor="passwordInput"></label>
             <input name="password" type="password" id="passwordInput" />
