@@ -14,4 +14,4 @@ module.exports = function config(app) {
   app.use(cookieParser());
   app.use(session(sessionConfig));
   app.use(ssr);
-};
+}
