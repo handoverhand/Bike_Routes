@@ -9,8 +9,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate({ Feedback, Bikeroute }) {
       // define association here
-      // Rider.hasMany(Feedback, { foreignKey: 'riderLoginFB' });
-      // Rider.hasMany(Bikeroute, { foreignKey: 'riderLoginBR' });
+      Rider.hasMany(Feedback, { foreignKey: 'riderLoginFB' });
+      Rider.hasMany(Bikeroute, { foreignKey: 'riderLoginBR' });
     }
   }
   const attributes = {
@@ -22,11 +22,10 @@ module.exports = (sequelize, DataTypes) => {
     },
     login: {
       allowNull: false,
-      // unique: true,
+      unique: true,
       type: DataTypes.TEXT,
       // references: {
       //   model: 'Bikeroute',
-      //   key: 'riderLoginBR',
       // },
     },
     password: {

@@ -9,11 +9,10 @@ module.exports = {
       },
       login: {
         allowNull: false,
-        // unique: true,
+        unique: true,
         type: Sequelize.TEXT,
         // references: {
-        //   model: 'Bikeroutes',
-        //   key: 'riderLoginBR',
+        //   model: 'Bikeroute',
         // },
       },
       password: {

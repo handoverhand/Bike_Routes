@@ -15,8 +15,12 @@ module.exports = {
         type: Sequelize.TEXT,
       },
       riderLoginBR: {
-        unique: true,
+        // unique: true,
         type: Sequelize.TEXT,
+        references: {
+          model: 'Riders',
+          key: 'login',
+        },
       },
       length: {
         type: Sequelize.INTEGER,
