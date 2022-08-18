@@ -1,6 +1,7 @@
 const React = require('react');
 const Navbar = require('./Navbar');
 
+
 function Layout({ children }) {
   return (
     <html lang="en">

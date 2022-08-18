@@ -1,8 +1,12 @@
 const bikeRoutesRouter = require('express').Router();
-const Bikeroutes = require('../views/Bikeroutes');
+const Bikerouteslist = require('../views/Bikerouteslist');
+const { Bikeroute } = require('../db/models');
 
-bikeRoutesRouter.get('/', (req, res) => {
-  res.renderComponent(Bikeroutes);
+bikeRoutesRouter.get('/', async (req, res) => {
+  const allRoutes = await Bikeroute.findAll({
+    raw: true,
+  });
+  res.renderComponent(Bikerouteslist, { allRoutes });
 });
 
 module.exports = bikeRoutesRouter;
