@@ -6,6 +6,7 @@ function Lk() {
     <Layout>
       <form action="" />
       <div id="map" style={{ width: `${600}px`, height: `${400}px` }}>1123456</div>
+      <input />
 
     </Layout>
   );
