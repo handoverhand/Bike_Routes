@@ -1,8 +1,9 @@
 const authRouter = require('express').Router();
 const bcrypt = require('bcrypt');
-const { useReducer } = require('react');
-const AuthorizationForm = require('../views/Authorization.jsx');
+//const { useReducer } = require('react');
 const { Rider } = require('../db/models');
+const AuthorizationForm = require('../views/Authorization.jsx');
+const RegistrationForm = require('../views/Registration.jsx');
 
 authRouter.get('/log', (req, res) => {
   res.renderComponent(AuthorizationForm);
@@ -22,7 +23,7 @@ authRouter.post('/log', async (req, res) => {
   }
   try {
     const isSame = await bcrypt.compare(req.body.password, rider.password);
-    //console.log(req.body.password, rider.password, rider.login, req.body.login);
+    // console.log(req.body.password, rider.password, rider.login, req.body.login);
 
     if (!isSame) {
       res.json({ error: 'Такого пользователя или пароля не существует' });
@@ -37,7 +38,23 @@ authRouter.post('/log', async (req, res) => {
     id: rider.id,
     login: rider.login,
   };
-  res.redirect('/');
+  res.redirect('/bikeroute');
+});
+
+authRouter.get('/logout', (req, res) => {
+  req.session.destroy((error) => {
+    if (error) {
+      res.json({ error: 'Не удалось выйти' });
+      return;
+    }
+    // Если сессия удалилась...
+    res.clearCookie('user_sid'); // очистить куку
+    res.redirect('/bikeroutes'); // завершить запрос
+  });
+});
+
+authRouter.get('/reg', (req, res) => {
+  res.renderComponent(RegistrationForm);
 });
 
 module.exports = authRouter;
