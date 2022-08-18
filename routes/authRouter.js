@@ -48,7 +48,7 @@ authRouter.get('/logout', (req, res) => {
       res.json({ error: 'Не удалось выйти' });
       return;
     }
-    // Если сессия удалилась...
+    
     res.clearCookie('user_sid'); // очистить куку
     res.redirect('/bikeroutes'); // завершить запрос
   });
