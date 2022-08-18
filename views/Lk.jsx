@@ -1,9 +1,10 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-function Lk() {
+function Lk({ rider }) {
   return (
-    <Layout>
+
+    <Layout rider={rider}>
       <form type="submit" className="lkForm">
         <div id="map" style={{ width: `${600}px`, height: `${400}px` }} />
         <div className="input-group mb-3">
@@ -12,6 +13,7 @@ function Lk() {
         </div>
         <div className="addedCoord" />
       </form>
+
     </Layout>
   );
 }

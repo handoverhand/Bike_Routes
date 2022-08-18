@@ -3,7 +3,8 @@ const Lk = require('../views/Lk');
 const { Bikeroute } = require('../db/models');
 
 lkRouter.get('/', (req, res) => {
-  res.renderComponent(Lk);
+  const {rider} = req.session;
+  res.renderComponent(Lk, {rider});
 });
 
 lkRouter.post('/coord', async (req, res) => {
