@@ -6,10 +6,22 @@ function BikeRoutesList({ allRoutes }) {
   return (
     <Layout>
       <form action="" className="allCards">
-        {allRoutes.map((el) => <BikeRoute id={el.id} title={el.title} location={el.location} riderLoginBR={el.riderLoginBR} length={el.length}/>)}
+        {
+          allRoutes.map(
+            (route) => (
+              <BikeRoute
+                id={route.id}
+                title={route.title}
+                location={route.location}
+                riderLoginBR={route.riderLoginBR}
+                length={route.length}
+              />
+            ),
+          )
+        }
       </form>
     </Layout>
-  )
-};
+  );
+}
 
 module.exports = BikeRoutesList;
