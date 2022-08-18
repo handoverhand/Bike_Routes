@@ -18,7 +18,7 @@ function Layout({ children, rider }) {
           src="https://api-maps.yandex.ru/2.1?apikey=3e1eeec6-c0ce-47fc-ae05-7131ff1c2570&lang=ru_RU"
           type="text/javascript"
         />
-        <script src="/js/route_panel_control.js" type="text/javascript" />
+        <script defer src="/js/route_panel_control.js" type="text/javascript" />
       </head>
       <body>
         <Navbar rider={rider} />
