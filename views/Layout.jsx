@@ -1,7 +1,7 @@
 const React = require('react');
 const Navbar = require('./Navbar');
 
-function Layout({ children }) {
+function Layout({ children, rider }) {
   return (
     <html lang="en">
       <head>
@@ -21,7 +21,7 @@ function Layout({ children }) {
         <script src="/js/route_panel_control.js" type="text/javascript" />
       </head>
       <body>
-        <Navbar />
+        <Navbar rider = {rider} />
         {/* <div id="map" style={{ width: `${600}px`, height: `${400}px` }}>1</div> */}
         {children}
       </body>
