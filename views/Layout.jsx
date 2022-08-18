@@ -13,8 +13,8 @@ function Layout({ children, rider }) {
         <link rel="stylesheet" href="/css/bootstrap.min.css" />
         <link rel="stylesheet" href="/css/style.css" />
         <script defer src="/js/bootstrap.bundle.min.js" />
-        <script src="https://yandex.st/jquery/2.2.3/jquery.min.js" type="text/javascript" />
-        <script
+        <script defer src="https://yandex.st/jquery/2.2.3/jquery.min.js" type="text/javascript" />
+        <script defer
           src="https://api-maps.yandex.ru/2.1?apikey=3e1eeec6-c0ce-47fc-ae05-7131ff1c2570&lang=ru_RU"
           type="text/javascript"
         />
