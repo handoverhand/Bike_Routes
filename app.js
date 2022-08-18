@@ -12,10 +12,12 @@ const config = require('./config/config');
 
 const authRouter = require('./routes/authRouter');
 const lkRouter = require('./routes/lkRouter');
+const bikeRoutesRouter = require('./routes/bikeRoutesRouter');
 
 config(app);
-app.use('/auth', authRouter);
 app.use('/lk', lkRouter);
+app.use('/auth', authRouter);
+app.use('/bikeroutes', bikeRoutesRouter);
 
 app.listen(PORT, async () => {
   try {
