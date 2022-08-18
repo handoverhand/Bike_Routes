@@ -2,9 +2,9 @@ const React = require('react');
 const Layout = require('./Layout');
 const BikeRoute = require('./Bikeroute');
 
-function BikeRoutesList({ allRoutes }) {
+function BikeRoutesList({ allRoutes, rider }) {
   return (
-    <Layout>
+    <Layout rider={rider}>
       <form action="" className="allCards">
         {
           allRoutes.map(

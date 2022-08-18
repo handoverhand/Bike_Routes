@@ -6,7 +6,8 @@ bikeRoutesRouter.get('/', async (req, res) => {
   const allRoutes = await Bikeroute.findAll({
     raw: true,
   });
-  res.renderComponent(Bikerouteslist, { allRoutes });
+  const {rider} = req.session;
+  res.renderComponent(Bikerouteslist, { allRoutes, rider });
 });
 
 module.exports = bikeRoutesRouter;

@@ -17,7 +17,7 @@ authRouter.post('/log', async (req, res) => {
       res.json({ error: 'Такого пользователя или пароля не существует!' });
       return;
     }
-  } catch (error) {
+   } catch (error) {
     res.json({ error: error.message });
     return;
   }
