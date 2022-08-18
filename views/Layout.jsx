@@ -1,4 +1,5 @@
-const React = require('react'); 
+const React = require('react');
+const Navbar = require('./Navbar');
 
 
 const Layout = ({children}) => {
@@ -15,6 +16,7 @@ const Layout = ({children}) => {
         <script defer src="/js/bootstrap.bundle.min.js" />
         </head>
         <body>
+        <Navbar />
             {children} 
         </body>
         </html>
