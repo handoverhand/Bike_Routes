@@ -21,8 +21,7 @@ function Layout({ children, rider }) {
         <script src="/js/route_panel_control.js" type="text/javascript" />
       </head>
       <body>
-        <Navbar rider = {rider} />
-        {/* <div id="map" style={{ width: `${600}px`, height: `${400}px` }}>1</div> */}
+        <Navbar rider={rider} />
         {children}
       </body>
     </html>
