@@ -12,8 +12,13 @@ const config = require('./config/config');
 
 const authRouter = require('./routes/authRouter');
 
+const bikeRoutesRouter = require('./routes/bikeRoutesRouter');
+
 config(app);
+
 app.use('/auth', authRouter);
+app.use('/bikeroutes', bikeRoutesRouter);
+
 
 app.listen(PORT, async () => {
   try {

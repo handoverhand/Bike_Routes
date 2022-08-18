@@ -34,7 +34,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.TEXT,
       references: {
         model: 'Riders',
-        key: 'login'
+        key: 'login',
       },
     },
     length: {
