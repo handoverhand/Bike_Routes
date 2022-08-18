@@ -1,7 +1,7 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-function Navbar() {
+function Navbar({rider}) {
   return (
     <nav className="navbar navbar-expand-lg bg-light">
       <div className="container-fluid">
