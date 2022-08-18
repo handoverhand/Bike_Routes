@@ -6,11 +6,11 @@ function RegistrationForm() {
     <Layout>
       <h2>Для регистрации придумайте Никнейм и пароль</h2>
       <form action="/auth/reg" method="POST">
-        <label htmlFor="loginInput">Введите Никнейм</label>
-        <input name="login" type="text" id="loginInput" />
+        <label htmlFor="loginIn">Введите Никнейм</label>
+        <input name="loginReg" type="text" id="loginIn" />
         <br />
-        <label htmlFor="passwordInput">Введите пароль</label>
-        <input name="password" type="password" id="passwordInput" />
+        <label htmlFor="passwordIn">Введите пароль</label>
+        <input name="passwordReg" type="password" id="passwordIn" />
         <br />
         <button type="submit">Регистрация</button>
       </form>
