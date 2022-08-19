@@ -65,6 +65,8 @@ if (lkForm) {
       });
       const data = await response.json();
 
+      console.log(event.target.imgInput.value);
+
       document.querySelector('.addedCoord').innerHTML = 'Координаты успешно добавлены';
     });
   });
@@ -96,7 +98,7 @@ if (bikerouteId) {
       // Зададим состояние панели для построения машрутов.
       control.routePanel.state.set({
         // Тип маршрутизации.
-        type: 'masstransit',
+        type: 'bicycle',
         // Выключим возможность задавать пункт отправления в поле ввода.
         fromEnabled: true,
         // Адрес или координаты пункта отправления.
@@ -115,7 +117,7 @@ if (bikerouteId) {
         // Адрес будет автоматически подставляться в поле ввода на панели, а также в подпись метки маршрута.
         reverseGeocoding: true,
         // Зададим виды маршрутизации, которые будут доступны пользователям для выбора.
-        types: { masstransit: true, pedestrian: true, taxi: true },
+        types: { masstransit: false, pedestrian: true, taxi: false, bicycle: true },
       });
 
       // Создаем кнопку, с помощью которой пользователи смогут менять местами начальную и конечную точки маршрута.

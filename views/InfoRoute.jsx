@@ -19,8 +19,7 @@ function BikeRoutesList({ id, bikerouteId }) {
             {bikerouteId.location}
           </div>
           <div>
-            Автор маршрута:
-            {bikerouteId.riderLoginBR}
+            Автор маршрута: {bikerouteId.riderLoginBR}
           </div>
           <button>Вернуться к списку маршрутов</button>
         </form>
