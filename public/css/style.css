@@ -1,0 +1,84 @@
+.allCards {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    column-gap: 50px;
+    flex-wrap: wrap
+}
+
+form, input {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    color: rgb(30, 30, 194);
+}
+h3 {
+    color: rgb(65, 132, 202);
+}
+h4 {
+  color: rgb(39, 95, 154);
+}
+.whiteDiv{
+    height: 50px
+}
+
+
+.regDiv{
+    width: 50%;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.MainForm {
+    position: relative;
+    width: 100%;
+  }
+  
+  .MainForm img {
+    width: 100%;
+    /* height: auto; */
+  }
+  
+  .MainForm .Mainbtn {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgb(24, 170, 196);
+    color: white;
+    font-size: 30px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .bikeRout{
+    color :rgb(255, 255, 255);
+    font-size: 30px;
+    margin: 20px  20px  20px  0;
+  }
+
+  .bikeReg{
+    color :rgb(195, 243, 241);
+    font-size: 30px;
+    margin: 20px  20px  20px  0;
+  }
+
+  .cardDiv{
+    height: 600px;
+    padding-bottom: 30px;
+  }
+
+  .lkmap{
+    width: 950px;
+    height: 430px;
+    margin: auto;
+  }
+
