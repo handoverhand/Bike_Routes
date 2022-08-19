@@ -4,6 +4,7 @@ const Layout = require('./Layout.jsx');
 function AuthorizationForm() {
   return (
     <Layout>
+      <div className = "regDiv shadow-lg p-3 mb-5 bg-body rounded">
       <div className = "whiteDiv"></div>
       <h2>Для входа в личный кабинет введите Никнейм и пароль</h2>
       <div className = "whiteDiv"></div>
@@ -16,6 +17,7 @@ function AuthorizationForm() {
         <br />
         <button type="submit" className="btn btn-primary">Вход</button>
       </form>
+      </div>
     </Layout>
   );
 }

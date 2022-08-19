@@ -8,9 +8,6 @@ function BikeRoutesList({ allRoutes, rider }) {
       <div
         action=""
         className="allCards"
-        style={{
-          backgroundColor: 'grey',
-        }}
       >
         <form>
           {
@@ -27,9 +24,6 @@ function BikeRoutesList({ allRoutes, rider }) {
             ),
           )
         }
-        </form>
-        <form type="submit" action="/">
-          <button>На главную</button>
         </form>
       </div>
     </Layout>
