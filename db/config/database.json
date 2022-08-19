@@ -1,8 +1,8 @@
 {
   "development": {
 
-    "username": "anatoliy",
-    "password": "",
+    "username": "postgres",
+    "password": "25091993Number",
     "database": "bikeroutes",
     "host": "127.0.0.1",
     "dialect": "postgres"

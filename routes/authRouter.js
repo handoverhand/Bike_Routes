@@ -29,7 +29,7 @@ authRouter.post('/log', async (req, res) => {
 
     if (!isSame) {
       const message = 'Такого пользователя или пароля не существует';
-      res.renderComponent(AuthorizationForm);
+      res.renderComponent(AuthorizationForm, {message});
       return;
     }
   } catch (error) {
@@ -69,9 +69,8 @@ authRouter.post(('/reg'), async (req, res) => {
       raw: true,
     });
     if (arrRider.includes(req.body.loginReg)) {
-      res.json({
-        error: 'Никнейм занят, придумывай другой!',
-      });
+      const regmessage ='Никнейм занят, придумывай другой!';
+      res.renderComponent(RegistrationForm, {regmessage});
     } else {
       const hash = await bcrypt.hash(req.body.passwordReg, 10);
       await Rider.create(
@@ -83,7 +82,8 @@ authRouter.post(('/reg'), async (req, res) => {
       res.redirect('/auth/log');
     }
   } catch (error) {
-    res.send('К сожалению, никнейм занят');
+    const regmessage ='Никнейм занят, придумывай другой!';
+    res.renderComponent(RegistrationForm, {regmessage});
   }
 });
 
