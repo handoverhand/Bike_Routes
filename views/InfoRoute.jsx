@@ -5,14 +5,14 @@ const Comment = require('./Comment');
 function BikeRoutesList({ id, bikerouteId, allCommentId }) {
   return (
     <Layout>
-      <div style={{ backgroundColor: 'grey' }}>
-        <div id={id} className="bikerouteId">Выбранный маршрут:</div>
+      <div>
+        <div id={id} className="bikerouteId"><h2>Выбранный маршрут:</h2></div>
         <div id="map" style={{ width: `${900}px`, height: `${600}px`, margin: 'auto' }} />
         <form type="submit" method="get" action="/bikeroutes">
           <div>
-            Название маршрута:
+            <h3>Название маршрута:</h3>
             {' '}
-            {bikerouteId.title}
+            <h2>{bikerouteId.title}</h2>
           </div>
           <div>
             Локация:
@@ -20,9 +20,9 @@ function BikeRoutesList({ id, bikerouteId, allCommentId }) {
             {bikerouteId.location}
           </div>
           <div>
-            Автор маршрута: {bikerouteId.riderLoginBR}
+            Автор маршрута: <h4>{bikerouteId.riderLoginBR}</h4>
           </div>
-          <button>Вернуться к списку маршрутов</button>
+          <button className="btn btn-primary">Вернуться к списку маршрутов</button>
         </form>
         <form>
         <input name="formInput" type="text" className="form-control" placeholder="Введите комментарий" aria-label="Recipient's username" aria-describedby="button-addon2" />

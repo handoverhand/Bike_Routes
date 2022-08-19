@@ -15,7 +15,7 @@ h2 {
     text-align: center;
     color: rgb(30, 30, 194);
 }
-h3 {
+h3, h4 {
     color: rgb(65, 132, 202);
 }
 .whiteDiv{
@@ -66,5 +66,10 @@ h3 {
     color :rgb(195, 243, 241);
     font-size: 30px;
     margin: 20px  20px  20px  0;
+  }
+
+  .cardDiv{
+    height: 600px;
+    padding-bottom: 30px;
   }
 
