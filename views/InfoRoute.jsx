@@ -25,13 +25,18 @@ function BikeRoutesList({ id, bikerouteId, allCommentId, rider }) {
           <button className="btn btn-primary">Вернуться к списку маршрутов</button>
         </form>
         {rider? 
+        <div className = "regDiv shadow-lg p-3 mb-5 bg-body rounded">
         <form type="submit" className="NewFormAdded111">
-        <input name="commentInput" type="text" className="form-control" placeholder="Введите комментарий" aria-label="Recipient's username" aria-describedby="button-addon2" />
-        <input name="gradeInput" type="text" className="form-control" placeholder="Введите оценку маршрута" aria-label="Recipient's username" aria-describedby="button-addon2" />
+        
+        <input name="formInput" type="text" className="form-control" placeholder="Введите комментарий" aria-label="Recipient's username" aria-describedby="button-addon2" />
+        <br />
+         <input name="formInput" type="text" className="form-control" placeholder="Введите оценку маршрута" aria-label="Recipient's username" aria-describedby="button-addon2" />
+        <br />
         <input id="Idforserver" value={id} type="text" style={{display:'none'}}/>
-        <button type="submit">добавить комментарий</button>
+        <button className="btn btn-primary">Добавить комментарий</button>
         <div className="coomentMessageNew"></div>
         </form>
+        </div>
         :
         <div>Зарегистрируйся для добавления комментария</div>
       }
