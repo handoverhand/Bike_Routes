@@ -1,4 +1,5 @@
 const lkForm = document.querySelector('.lkForm');
+const bikerouteId = document.querySelector('.bikerouteId');
 // Код для личного кабинета
 if (lkForm) {
   const { ymaps } = window;
@@ -68,8 +69,10 @@ if (lkForm) {
     console.log(control.routePanel.state._data);
     console.log(control.routePanel.state._data);
   });
-} else { 
+}
+
   // Код для страниц 
+if (bikerouteId) { 
 const bikeroutesId = document.querySelector('.bikerouteId').id;
 
 async function Coord() {
@@ -130,26 +133,5 @@ async function Coord() {
     });
 }
 
-Coord();
-  
-}  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+Coord();  
+}

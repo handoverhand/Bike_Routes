@@ -37,6 +37,9 @@ module.exports = {
       destLng: {
         type: Sequelize.FLOAT,
       },
+      img: {
+        type: Sequelize.TEXT,
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
