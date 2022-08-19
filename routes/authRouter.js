@@ -14,7 +14,8 @@ authRouter.post('/log', async (req, res) => {
   try {
     rider = await Rider.findOne({ where: { login: req.body.login } });
     if (!rider) {
-      res.json({ error: 'Такого пользователя или пароля не существует!' });
+      const message = 'Такого пользователя или пароля не существует!';
+      res.renderComponent(AuthorizationForm, {message});
       return;
     }
    } catch (error) {
@@ -27,7 +28,8 @@ authRouter.post('/log', async (req, res) => {
     // console.log(isSame)
 
     if (!isSame) {
-      res.json({ error: 'Такого пользователя или пароля не существует' });
+      const message = 'Такого пользователя или пароля не существует';
+      res.renderComponent(AuthorizationForm);
       return;
     }
   } catch (error) {

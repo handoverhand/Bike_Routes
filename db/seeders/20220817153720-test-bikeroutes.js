@@ -9,6 +9,7 @@ module.exports = {
       origLng: 30.31,
       destLat: 59.9,
       destLng: 29.09,
+      img: '/images/country.jpg',
       createdAt: new Date(),
       updatedAt: new Date(),
     }, {
@@ -20,6 +21,7 @@ module.exports = {
       origLng: 37.62,
       destLat: 55.58,
       destLng: 42.04,
+      img: '/images/шоссе.jpg',
       createdAt: new Date(),
       updatedAt: new Date(),
     }, {
@@ -31,6 +33,7 @@ module.exports = {
       origLng: 39.73,
       destLat: 45.04,
       destLng: 38.98,
+      img: '/images/Для летунов.jpeg',
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
