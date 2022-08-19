@@ -59,9 +59,10 @@ if (lkForm) {
         headers: { 'Content-Type': 'Application/json' },
         body: JSON.stringify({
           coord: control.routePanel.state._data,
+          title: event.target.formInput.value,
+          img: event.target.imgInput.value,
         }),
       });
-
       const data = await response.json();
 
       document.querySelector('.addedCoord').innerHTML = 'Координаты успешно добавлены';
@@ -69,9 +70,9 @@ if (lkForm) {
   });
 }
 
-  // Код для страниц 
-if (bikerouteId) { 
-const bikeroutesId = document.querySelector('.bikerouteId').id;
+// Код для страниц
+if (bikerouteId) {
+  const bikeroutesId = document.querySelector('.bikerouteId').id;
 
   async function Coord() {
     const response = await fetch(`/bikeroutes/${bikeroutesId}/info`, {
