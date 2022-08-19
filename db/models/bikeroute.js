@@ -52,6 +52,9 @@ module.exports = (sequelize, DataTypes) => {
     destLng: {
       type: DataTypes.FLOAT,
     },
+    img: {
+      type: DataTypes.TEXT,
+    },
     createdAt: {
       allowNull: false,
       type: DataTypes.DATE,
