@@ -2,9 +2,9 @@ const React = require('react');
 const Layout = require('./Layout');
 const Comment = require('./Comment');
 
-function BikeRoutesList({ id, bikerouteId, allCommentId }) {
+function BikeRoutesList({ id, bikerouteId, allCommentId, rider }) {
   return (
-    <Layout>
+    <Layout rider={rider}>
       <div>
         <div id={id} className="bikerouteId"><h2>Выбранный маршрут:</h2></div>
         <div id="map" style={{ width: `${900}px`, height: `${600}px`, margin: 'auto' }} />
@@ -24,11 +24,17 @@ function BikeRoutesList({ id, bikerouteId, allCommentId }) {
           </div>
           <button className="btn btn-primary">Вернуться к списку маршрутов</button>
         </form>
-        <form>
-        <input name="formInput" type="text" className="form-control" placeholder="Введите комментарий" aria-label="Recipient's username" aria-describedby="button-addon2" />
-        <input name="formInput" type="text" className="form-control" placeholder="Введите оценку маршрута" aria-label="Recipient's username" aria-describedby="button-addon2" />
-          <button>добавить комментарий</button>
+        {rider? 
+        <form type="submit" className="NewFormAdded111">
+        <input name="commentInput" type="text" className="form-control" placeholder="Введите комментарий" aria-label="Recipient's username" aria-describedby="button-addon2" />
+        <input name="gradeInput" type="text" className="form-control" placeholder="Введите оценку маршрута" aria-label="Recipient's username" aria-describedby="button-addon2" />
+        <input id="Idforserver" value={id} type="text" style={{display:'none'}}/>
+        <button type="submit">добавить комментарий</button>
+        <div className="coomentMessageNew"></div>
         </form>
+        :
+        <div>Зарегистрируйся для добавления комментария</div>
+      }
         {allCommentId.map((el) => <Comment comment={el.comment} grade={el.grade} riderLoginFB={el.riderLoginFB}/>)}
       </div>
     </Layout>
