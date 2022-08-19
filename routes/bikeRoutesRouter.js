@@ -8,7 +8,7 @@ bikeRoutesRouter.get('/', async (req, res) => {
   const allRoutes = await Bikeroute.findAll({
     raw: true,
   });
-
+  console.log('allRoutes', allRoutes)
   const { rider } = req.session;
   res.renderComponent(Bikerouteslist, { allRoutes, rider });
 });

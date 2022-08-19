@@ -14,13 +14,14 @@ function BikeRoutesList({ allRoutes, rider }) {
           allRoutes.map(
             (route) => (
               <BikeRoute
+                key={route.id}
                 id={route.id}
                 title={route.title}
                 location={route.location}
                 riderLoginBR={route.riderLoginBR}
                 length={route.length}
                 img={route.img}
-              />
+                />
             ),
           )
         }
