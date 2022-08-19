@@ -1,4 +1,5 @@
 const lkForm = document.querySelector('.lkForm');
+const bikerouteId = document.querySelector('.bikerouteId');
 // Код для личного кабинета
 if (lkForm) {
   const { ymaps } = window;
@@ -66,9 +67,11 @@ if (lkForm) {
       document.querySelector('.addedCoord').innerHTML = 'Координаты успешно добавлены';
     });
   });
-} else {
-  // Код для страниц
-  const bikeroutesId = document.querySelector('.bikerouteId').id;
+}
+
+  // Код для страниц 
+if (bikerouteId) { 
+const bikeroutesId = document.querySelector('.bikerouteId').id;
 
   async function Coord() {
     const response = await fetch(`/bikeroutes/${bikeroutesId}/info`, {

@@ -4,6 +4,7 @@ const Layout = require('./Layout.jsx');
 function RegistrationForm() {
   return (
     <Layout>
+      <div className = "regDiv shadow-lg p-3 mb-5 bg-body rounded">
       <div className = "whiteDiv"></div>
       <h2>Для регистрации придумайте Никнейм и пароль</h2>
       <div className = "whiteDiv"></div>
@@ -16,6 +17,7 @@ function RegistrationForm() {
         <br />
         <button type="submit" className="btn btn-primary">Регистрация</button>
       </form>
+      </div>
     </Layout>
   );
 }

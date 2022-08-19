@@ -5,8 +5,15 @@ const BikeRoute = require('./Bikeroute');
 function BikeRoutesList({ allRoutes, rider }) {
   return (
     <Layout rider={rider}>
-      <form action="" className="allCards">
-        {
+      <div
+        action=""
+        className="allCards"
+        style={{
+          backgroundColor: 'grey',
+        }}
+      >
+        <form>
+          {
           allRoutes.map(
             (route) => (
               <BikeRoute
@@ -15,11 +22,16 @@ function BikeRoutesList({ allRoutes, rider }) {
                 location={route.location}
                 riderLoginBR={route.riderLoginBR}
                 length={route.length}
+                img={route.img}
               />
             ),
           )
         }
-      </form>
+        </form>
+        <form type="submit" action="/">
+          <button>На главную</button>
+        </form>
+      </div>
     </Layout>
   );
 }
