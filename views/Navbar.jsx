@@ -14,10 +14,10 @@ function Navbar({ rider }) {
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="/auth/reg">Registration</a>
+                  <a className="nav-link active" aria-current="page" href="/auth/reg">Регистрация</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/auth/log">Login</a>
+                  <a className="nav-link" href="/auth/log">Вход</a>
                 </li>
               </ul>
             </div>
@@ -26,14 +26,20 @@ function Navbar({ rider }) {
         ) : (
         <nav className="navbar navbar-expand-lg bg-light">
           <div className="container-fluid">
-            <a className="navbar-brand" href="/bikeroutes">Bike_Rootes</a>
+            <a className="navbar-brand" href="/bikeroutes">Bike_Routes</a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon" />
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <a className="nav-link" href="/auth/logout">Logout</a>
+                  <a className="nav-link">Привет, {rider.login}!</a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/lk">Создать маршрут</a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/auth/logout">Выйти</a>
                 </li>
               </ul>
             </div>

@@ -83,10 +83,7 @@ authRouter.post(('/reg'), async (req, res) => {
       res.redirect('/auth/log');
     }
   } catch (error) {
-    res.json({
-      error: error.message,
-      data: null,
-    });
+    res.send('К сожалению, никнейм занят');
   }
 });
 
