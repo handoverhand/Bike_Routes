@@ -9,9 +9,10 @@ lkRouter.get('/', (req, res) => {
 
 lkRouter.post('/coord', async (req, res) => {
   const { rider } = req.session;
+  const image = req.body.img.replace(/(C:\\fakepath\\)/, /images/);
   await Bikeroute.create({
     title: req.body.title,
-    img: req.body.img,
+    img: image,
     location: 'Sankt-Petersburg',
     riderLoginBR: rider.login,
     length: 100,
