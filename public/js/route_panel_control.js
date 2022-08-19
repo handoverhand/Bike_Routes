@@ -21,7 +21,7 @@ if (lkForm) {
       // Выключим возможность задавать пункт отправления в поле ввода.
       fromEnabled: true,
       // Адрес или координаты пункта отправления.
-      from: [59.9385895937484, 30.31618042489476],
+      from: [59.943683, 30.360164],
       // Включим возможность задавать пункт назначения в поле ввода.
       toEnabled: true,
       // Адрес или координаты пункта назначения.
@@ -61,6 +61,7 @@ if (lkForm) {
           coord: control.routePanel.state._data,
           title: event.target.formInput.value,
           img: event.target.imgInput.value,
+          loc: event.target.locInput.value,
         }),
       });
       const data = await response.json();

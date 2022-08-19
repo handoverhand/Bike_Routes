@@ -13,7 +13,7 @@ lkRouter.post('/coord', async (req, res) => {
   await Bikeroute.create({
     title: req.body.title,
     img: image,
-    location: 'Sankt-Petersburg',
+    location: req.body.loc,
     riderLoginBR: rider.login,
     length: 100,
     origLat: req.body.coord.from[0],
