@@ -11,6 +11,9 @@ function Lk({ rider }) {
 
           <input name="formInput" type="text" className="form-control" placeholder="Введите название маршрута" aria-label="Recipient's username" aria-describedby="button-addon2" />
 
+          <input name="locInput" type="text" className="form-control" placeholder="Введите название локации" aria-label="Recipient's username" aria-describedby="button-addon2" />
+
+
           <div className="input-group mb-3">
             <input name="imgInput" type="file" className="form-control" id="inputGroupFile02" />
             <label className="input-group-text" htmlFor="inputGroupFile02" />
