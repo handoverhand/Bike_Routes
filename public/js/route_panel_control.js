@@ -65,6 +65,8 @@ if (lkForm) {
       });
       const data = await response.json();
 
+      console.log(event.target.imgInput.value);
+
       document.querySelector('.addedCoord').innerHTML = 'Координаты успешно добавлены';
     });
   });
