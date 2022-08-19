@@ -1,7 +1,8 @@
 const React = require('react');
 const Layout = require('./Layout');
+const Comment = require('./Comment');
 
-function BikeRoutesList({ id, bikerouteId }) {
+function BikeRoutesList({ id, bikerouteId, allCommentId }) {
   return (
     <Layout>
       <div style={{ backgroundColor: 'grey' }}>
@@ -23,6 +24,12 @@ function BikeRoutesList({ id, bikerouteId }) {
           </div>
           <button>Вернуться к списку маршрутов</button>
         </form>
+        <form>
+        <input name="formInput" type="text" className="form-control" placeholder="Введите комментарий" aria-label="Recipient's username" aria-describedby="button-addon2" />
+        <input name="formInput" type="text" className="form-control" placeholder="Введите оценку маршрута" aria-label="Recipient's username" aria-describedby="button-addon2" />
+          <button>добавить комментарий</button>
+        </form>
+        {allCommentId.map((el) => <Comment comment={el.comment} grade={el.grade} riderLoginFB={el.riderLoginFB}/>)}
       </div>
     </Layout>
   );
