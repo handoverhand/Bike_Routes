@@ -7,7 +7,7 @@ function BikeRoutesList({ allRoutes, rider }) {
       <form className="MainForm" type="submit" action="/bikeroutes" >
       {/* style={{ backgroundImage: '/images/Main.jpeg' }}> */}
       <img src='/images/Main.jpeg' alt="Тест" width="100%" />
-      <button className="Mainbtn">Перейти к выбору маршрутов</button>
+      <button className="Mainbtn btn btn-primary">Выберите свой веломаршрут</button>
       </form>
     </Layout>
   );
