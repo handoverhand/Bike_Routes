@@ -1,7 +1,7 @@
 const React = require('react');
 const Layout = require('./Layout.jsx');
 
-function AuthorizationForm() {
+function AuthorizationForm({ message }) {
   return (
     <Layout>
       <div className = "regDiv shadow-lg p-3 mb-5 bg-body rounded">
@@ -16,6 +16,7 @@ function AuthorizationForm() {
         <input name="password" type="password" id="passwordInput" className="form-control" />
         <br />
         <button type="submit" className="btn btn-primary">Вход</button>
+        <div>{message}</div>
       </form>
       </div>
     </Layout>
