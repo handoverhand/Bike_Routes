@@ -1,7 +1,7 @@
 const React = require('react');
 const Layout = require('./Layout.jsx');
 
-function RegistrationForm() {
+function RegistrationForm({regmessage}) {
   return (
     <Layout>
       <div className = "regDiv shadow-lg p-3 mb-5 bg-body rounded">
@@ -16,6 +16,7 @@ function RegistrationForm() {
         <input name="passwordReg" type="password" id="passwordIn" className="form-control" />
         <br />
         <button type="submit" className="btn btn-primary">Регистрация</button>
+        <div>{regmessage}</div>
       </form>
       </div>
     </Layout>
