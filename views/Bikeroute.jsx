@@ -9,7 +9,7 @@ function BikeRoute({ id, title, location, riderLoginBR, length, img}) {
       <h4>Локация: {location}</h4>
       <h5>Протяженность: {length} км</h5>
       <p><img src={img} alt="Тест" width={500} /></p>
-      <p>Автор: {riderLoginBR}</p>
+      <p>Автор: <h4>{riderLoginBR}</h4></p>
       <a href={`/bikeroutes/${id}`}>Подробнее о маршруте</a>
       <br />
     </form>
