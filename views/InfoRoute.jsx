@@ -24,11 +24,15 @@ function BikeRoutesList({ id, bikerouteId, allCommentId }) {
           </div>
           <button className="btn btn-primary">Вернуться к списку маршрутов</button>
         </form>
+        <div className = "regDiv shadow-lg p-3 mb-5 bg-body rounded">
         <form>
         <input name="formInput" type="text" className="form-control" placeholder="Введите комментарий" aria-label="Recipient's username" aria-describedby="button-addon2" />
+        <br />
         <input name="formInput" type="text" className="form-control" placeholder="Введите оценку маршрута" aria-label="Recipient's username" aria-describedby="button-addon2" />
-          <button>добавить комментарий</button>
+        <br />
+          <button className="btn btn-primary">Добавить комментарий</button>
         </form>
+        </div>
         {allCommentId.map((el) => <Comment comment={el.comment} grade={el.grade} riderLoginFB={el.riderLoginFB}/>)}
       </div>
     </Layout>
